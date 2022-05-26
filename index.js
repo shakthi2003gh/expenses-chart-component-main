@@ -30,7 +30,7 @@ const spendingData = [
 ];
 
 const graphBar = document.querySelector(".graph");
-const dayBar = graphBar.querySelectorAll(".expenses");
+const dayBar = graphBar.querySelectorAll(".expenses-bar");
 const maxBarHeight = 13;
 const maxAmountSpendInWeek = Math.max(
   ...spendingData.map((spending) => spending.amount)
@@ -40,7 +40,9 @@ dayBar.forEach((day, count) => {
   const barHeight =
     (spendingData[count].amount / maxAmountSpendInWeek) * maxBarHeight;
   day.style.height = barHeight + "rem";
+  day.dataset.amount = "$" + spendingData[count].amount;
 
-  if (barHeight === maxBarHeight)
-    day.style.backgroundColor = "hsl(186, 34%, 60%)";
+  if (barHeight === maxBarHeight) return day.classList.add("color-secondary");
+
+  day.classList.add("color-primary");
 });

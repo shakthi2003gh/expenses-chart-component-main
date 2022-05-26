@@ -13,6 +13,14 @@ html {
 
 body {
   min-width: 375px;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+img {
+  width: 60px;
+  height: 35px;
 }
 
 /* Color Palette */
@@ -29,6 +37,99 @@ body {
 
 /* Typography */
 body {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-family: "DM Sans", sans-serif;
+  color: rgba(255, 255, 255, 0.758);
+  background-color: var(--color-body-bg);
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin: 0;
+  color: var(--color-primary-text);
+}
+
+b.one {
+  font-size: 2.7rem;
+  color: var(--color-primary-text);
+}
+
+b.two {
+  font-size: 2.3rem;
+  color: whitesmoke;
+}
+
+b.three {
+  color: var(--color-primary-text);
+}
+
+/* Chart block */
+.chart {
+  display: grid;
+  gap: 2rem;
+}
+
+/* blance block */
+.balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: 1.5rem 2rem;
+  border-radius: 15px;
+  line-height: 2.8ch;
+}
+
+/* Spending block */
+.spending {
+  display: grid;
+  color: var(--color-secondary-text);
+  background-color: whitesmoke;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
+}
+
+.graph {
+  width: 100%;
+  min-width: 300px;
+  height: 20rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 0.5rem;
+}
+
+.weekday {
+  display: grid;
+  gap: 1rem;
+}
+
+.expenses {
+  width: 3rem;
+  height: 13rem;
+  border-radius: 4px;
+  background-color: var(--color-primary);
+}
+
+.day {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.expenditure {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+  border-top: 2px solid var(--color-body-bg);
+  padding-top: 1.5rem;
+}
+
+.current-month {
+  line-height: 3ch;
+}
+
+.previous-month {
+  line-height: 1.9ch;
 }
